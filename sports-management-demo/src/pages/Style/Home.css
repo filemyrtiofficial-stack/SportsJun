@@ -1,0 +1,178 @@
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: videoZoom 30s ease-in-out infinite alternate;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.hero-title span {
+  background: linear-gradient(45deg, #f39c12, #f1c40f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  margin: 15px 0 25px;
+  font-size: 1.3rem;
+  color: #ddd;
+  animation: floatUpDown 6s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.btn-cta {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  padding: 12px 30px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: floatUpDown 6s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.btn-cta:hover {
+  background: linear-gradient(45deg, #e67e22, #d35400);
+  transform: scale(1.1);
+}
+
+/* ==========================
+   STATS SECTION
+========================== */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  color: #0a3d62;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ==========================
+   FEATURES SECTION
+========================== */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0a3d62;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes videoZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-cta {
+    padding: 10px 20px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

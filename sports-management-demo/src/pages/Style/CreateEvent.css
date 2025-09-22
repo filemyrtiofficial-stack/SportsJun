@@ -1,0 +1,119 @@
+.form-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a3d62;
+}
+
+/* Step Indicators */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  transition: background 0.3s;
+}
+
+.step.active {
+  background: #f39c12;
+}
+
+/* Steps container */
+.steps-container {
+  display: flex;
+  width: 300%; /* 3 steps */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual step */
+.form-step {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #0a3d62;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border: 2px solid #f39c12;
+  outline: none;
+}
+
+/* Buttons */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #f39c12;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #e67e22;
+  transform: scale(1.05);
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-page {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .form-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
