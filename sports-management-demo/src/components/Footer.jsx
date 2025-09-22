@@ -4,7 +4,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <h3>SportsManage</h3>
+          <h3>SportsJun</h3>
           <p>Manage sports events effortlessly.</p>
         </div>
         <div className="footer-links">

@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">🏆 Sports Manager</div>
+      <div className="logo">🏆 Sportsjun</div>
       <div className={`nav-links ${open ? "open" : ""}`}>
         <Link to="/">Home</Link>
         <Link to="/create-event">Create Event</Link>

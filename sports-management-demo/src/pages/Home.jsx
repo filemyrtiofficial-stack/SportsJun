@@ -24,7 +24,7 @@ function Home() {
             From leagues to tournaments, manage everything in one platform.
           </p>
           <Link to="/create-event" className="btn-cta">
-            🚀 Start Creating Events
+            Start Creating Events
           </Link>
         </div>
       </section>
